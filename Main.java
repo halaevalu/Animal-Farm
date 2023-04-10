@@ -8,11 +8,12 @@
  * @author halae
  */
 public class Main {
-    public class Dog {
+    /*public class Dog {
     // Class variables and methods
     
     public void makeSound() {
         System.out.println("Bark!");
-    }
+    }*/
+    
 }
-}
+

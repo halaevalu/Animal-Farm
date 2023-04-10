@@ -187,14 +187,44 @@ public class AnimalFarm extends javax.swing.JFrame {
     }//GEN-LAST:event_QuitActionPerformed
 
     private void AnimalButtonPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnimalButtonPressed
+    Animal animal = null;
+    String buttonLabel = evt.getActionCommand();
+    switch (buttonLabel) {
+        case "Dog":
+            animal = new Mammal("Dog", 10, 15, "Meat");
+            break;
+        case "Cat":
+            animal = new Mammal("Cat", 5, 20, "Cat food");
+            break;
+        /*case "Bird":
+            animal = new Bird("Eagle", 20, "Fish", 25);
+            break;
+        case "Fish":
+            animal = new Fish("Salmon", 3, "Aquatic Insects", 5);
+            break;
+        case "Amphibian":
+            animal = new Amphibian("Frog", 2, "Insects", 7);
+            break;
+        default:
+            break;*/
+    }
+    if (animal != null) {
+        displayAnimalInfo(animal);
+    }
+}
+
+    public void displayAnimalInfo(Animal animal) {
+        // display the animal information in the GUI
+        String animalInfo = animal.getInfo();
+        javax.swing.JOptionPane.showMessageDialog(null, animalInfo);
         // TODO add your handling code here:
-        if (evt.getSource() instanceof JButton) {
+        /*if (evt.getSource() instanceof JButton) {
             JButton button = (JButton) evt.getSource();
             String buttonName = button.getName();
-            if (buttonName.equals("button1")) {
+            if (buttonName.equals("Dog")) {
                 // Code to be executed when button1 is clicked
             }
-        }
+        }*/
         //if ()
         //Animal animal = new Animal();
     }//GEN-LAST:event_AnimalButtonPressed

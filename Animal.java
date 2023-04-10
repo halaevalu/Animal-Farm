@@ -78,12 +78,18 @@ public class Animal {
         this.food = food;
     }
 
-    public void eat() {
+    /*public void eat() {
         System.out.println(getName() + " is eating.");
+    }*/
+    
+    public String getInfo() { //goes into animal.java
+        return "Name: " + name + ", Average Sleep Time: " + avgSleepTime + ", Food: " + food + ", Lifespan: " + lifespan;
     }
+
 
     /*public void sleep() {
         System.out.println(getName() + " is sleeping.");
     }*/
+    
 }
 
