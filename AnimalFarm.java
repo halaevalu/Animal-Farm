@@ -178,7 +178,7 @@ public class AnimalFarm extends javax.swing.JFrame {
 
     private void AboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AboutActionPerformed
         // TODO add your handling code here:
-        javax.swing.JOptionPane.showMessageDialog(null, "CNIT25501 Final Project\n\nDevloped by Palwasha Khan and Halaevalu Patterson");
+        javax.swing.JOptionPane.showMessageDialog(null, "CNIT25501 Final Project\n\nDevloped by Palwasha Khan (0034238927) and Halaevalu Patterson(0033530652)\n\n\n\n\nPS: The alligator fact is correct.");
     }//GEN-LAST:event_AboutActionPerformed
 
     private void QuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitActionPerformed
@@ -191,22 +191,41 @@ public class AnimalFarm extends javax.swing.JFrame {
     String buttonLabel = evt.getActionCommand();
     switch (buttonLabel) {
         case "Dog":
-            animal = new Mammal("Dog", 10, 15, "Meat");
+            animal = new Mammal("Dog", 11, 13, "Meat & Dog Food", "Omnivore", "Dogs can sniff at the same time as breathing.");//, dogSound);
             break;
         case "Cat":
-            animal = new Mammal("Cat", 5, 20, "Cat food");
+            animal = new Mammal("Cat", 15, 15, "Cat food & Meat", "Carnivore", "A house cat is genetically 95.6% tiger.");//, catSound);
             break;
-        /*case "Bird":
-            animal = new Bird("Eagle", 20, "Fish", 25);
+        case "Cow":
+            animal = new Mammal("Cow", 4, 20, "Pasture Grasses & Hay", "Herbivore", "Even though cows only sleep 4 hours, they drowse for 8 hours.");//, catSound);
             break;
-        case "Fish":
-            animal = new Fish("Salmon", 3, "Aquatic Insects", 5);
+        case "Shark":
+            animal = new Fish("Shark", 0, 25, "Fish & Invertebrates", "Carnivore", "Instead of sleeping (like we think), sharks take a period of rest by gliding down instead of swimming.");//, catSound);
             break;
-        case "Amphibian":
-            animal = new Amphibian("Frog", 2, "Insects", 7);
+        case "Dolphin":
+            animal = new Fish("Dolphin", 8, 15, "Fish, Squid, Crustaceans", "Carnivore", "Dolphins sleep with only 1/2 of their brain at a time.");//, catSound);
             break;
-        default:
-            break;*/
+        case "Owl":
+            animal = new Bird("Owl", 12, 10, "Mice, Squirrels, & Small Animals", "Carnivore", "Owls can turn their head 270 degrees (almost a full circle!)");//, catSound);
+            break;   
+        case "Chicken":
+            animal = new Bird("Chicken", 8, 7, "Weeds, Seeds, & Insects", "Omnivore", "Chickens are descendants of dinosaurs (maybe they should be roaring instead of bawking).");//, catSound);
+            break;
+        case "Crow":
+            animal = new Bird("Crow", 10, 8, "Insects, Small Animals, Fruit, & Seeds", "Omnivore", "There's a book called Six of Crows... It's not about crows. You should read it anyway.");//, catSound);
+            break;
+        case "Frog":
+            animal = new Amphibian("Frog", 13, 20, "Insects & Invertebrates", "Carnivore", "Tell frogs and toads apart: Frogs have longer legs (longer than their head and body) meant for hopping. Frogs have smooth and slimy skin.");//, catSound);
+            break;
+        case "Toad":
+            animal = new Amphibian("Toad", 14, 12, "Insects & Anthropods", "Carnivore", "Tell frogs and toads apart: Toads have shorter legs than frogs and prefer to crawl around rather than hop. Toads have dry, warty skin.");//, catSound);
+            break;
+        case "Alligator":
+            animal = new Reptile("Alligator", 17, 40, "Fish, Invertebrates, & Small Mammals", "Carnivore", "Tell alligators and crocodiles apart: Crocodiles are more aggressive, while alligators only attack when hungry or provoked.");//, catSound);
+            break;
+        case "Crocodile":
+            animal = new Reptile("Crocodile", 17, 65, "Insects, Fish, & Small Frogs", "Carnivore", "Tell alligators and crocodiles apart: Alligators are more aggressive, while crocodiles only attack when hungry or provoked.");//, catSound);
+            break;
     }
     if (animal != null) {
         displayAnimalInfo(animal);
@@ -217,16 +236,7 @@ public class AnimalFarm extends javax.swing.JFrame {
         // display the animal information in the GUI
         String animalInfo = animal.getInfo();
         javax.swing.JOptionPane.showMessageDialog(null, animalInfo);
-        // TODO add your handling code here:
-        /*if (evt.getSource() instanceof JButton) {
-            JButton button = (JButton) evt.getSource();
-            String buttonName = button.getName();
-            if (buttonName.equals("Dog")) {
-                // Code to be executed when button1 is clicked
-            }
-        }*/
-        //if ()
-        //Animal animal = new Animal();
+        
     }//GEN-LAST:event_AnimalButtonPressed
 
     /**

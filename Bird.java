@@ -7,8 +7,8 @@
  *
  * @author halae
  */
-public class Mammal extends Animal {
-    public Mammal(String name, int avgSleepTime, int lifespan, String food, String diet, String fact) {
+public class Bird extends Animal {
+    public Bird (String name, int avgSleepTime, int lifespan, String food, String diet, String fact) {
         super(name, avgSleepTime, lifespan, food, diet, fact);
     }
 }

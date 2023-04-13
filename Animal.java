@@ -39,20 +39,6 @@ public class Animal {
     }
 
     /**
-     * @return the lifespan
-     */
-    public int getLifespan() {
-        return lifespan;
-    }
-
-    /**
-     * @param lifespan the lifespan to set
-     */
-    public void setLifespan(int lifespan) {
-        this.lifespan = lifespan;
-    }
-
-    /**
      * @return the food
      */
     public String getFood() {
@@ -68,28 +54,72 @@ public class Animal {
 // properties shared by all animals
     private String name;
     private int avgSleepTime;
-    private int lifespan;
+    private Lifespan lifespan;
     private String food;
+    private Diet diet;
+    private Fact fact;
+    //private Sound sound;
 
-    public Animal(String name, int avgSleepTime, int lifespan, String food) {
+    public Animal(String name, int avgSleepTime, int lifespan, String food, String diet, String fact) {
         this.name = name;
         this.avgSleepTime = avgSleepTime;
-        this.lifespan = lifespan;
+        this.lifespan = new Lifespan(lifespan);
         this.food = food;
+        this.diet = new Diet(diet);
+        this.fact = new Fact(fact);
     }
-
-    /*public void eat() {
-        System.out.println(getName() + " is eating.");
-    }*/
+    
+    public class Fact {
+        private String fact;
+        
+        public Fact(String fact) {
+            this.fact = fact;
+        }
+        
+        public String getFact() {
+            return fact;
+        }
+    }
+    
+    public String getFunFact() {
+        return fact.getFact();
+    }
+    
+    public class Diet {
+        private String type;
+        
+        public Diet(String type) {
+            this.type = type;
+        }
+        
+        public String getType() {
+            return type;
+        }
+    }
+    
+    public String getFoodType() {
+        return diet.getType();
+    }
+    
+    public int getAverageLifespan() {
+        return lifespan.getAverageLifespan();
+    }
+    
+    public class Lifespan {
+        private int averageLifespan;
+        
+        public Lifespan(int averageLifespan) {
+            this.averageLifespan = averageLifespan;
+        }
+        
+        public int getAverageLifespan() {
+            return averageLifespan;
+        }
+    }
     
     public String getInfo() { //goes into animal.java
-        return "Name: " + name + ", Average Sleep Time: " + avgSleepTime + ", Food: " + food + ", Lifespan: " + lifespan;
+        
+        return "NAME: " + name + "\nAVERAGE SLEEP TIME: " + avgSleepTime + " hours" + "\nDIET: " + getFoodType() + "\nEATS: " + food + "\nAVERAGE LIFESPAN: " + getAverageLifespan() + " years" + "\n\n\nFUN FACT: " + getFunFact();
     }
-
-
-    /*public void sleep() {
-        System.out.println(getName() + " is sleeping.");
-    }*/
-    
 }
 
