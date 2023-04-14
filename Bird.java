@@ -10,5 +10,6 @@
 public class Bird extends Animal {
     public Bird (String name, int avgSleepTime, int lifespan, String food, String diet, String fact) {
         super(name, avgSleepTime, lifespan, food, diet, fact);
+        javax.swing.JOptionPane.showMessageDialog(null, "You've selected a Bird");
     }
 }
